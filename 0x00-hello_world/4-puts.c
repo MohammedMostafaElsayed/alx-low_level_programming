@@ -1,7 +1,8 @@
 #include<stdio.h>
 /**
- *this is simply program to print output
- *dont use printf
+ * main -Entry point
+ *
+ * Return: Alwayes 0 (success)
  */
 int main(void)
 {

@@ -2,7 +2,7 @@
 
 /**
  * _islower - function for check number or char
- * c is char to print
+ * @c is char to print
  *
  * Return: 1 (is number) 0 (otherwise)
  */

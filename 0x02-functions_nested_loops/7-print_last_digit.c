@@ -16,7 +16,8 @@ int print_last_digit(int n)
 	}
 	else if (n > 98)
 	{
-		x = 88;
+		x = 8;
+		_putchar(x + '0');
 	}else
 	{
 		x = n % 10;

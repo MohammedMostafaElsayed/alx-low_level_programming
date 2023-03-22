@@ -1,8 +1,9 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_times_table - prit multi number
- * @n: entry number
+ * print_times_table - print table
+ *@n: is input
  *
  * Return: void
  */
@@ -11,18 +12,27 @@ void print_times_table(int n)
 	int i;
 	int j;
 
-	for (i = 0; i < n; i++)
+	if (n < 15 && n > 0)
 	{
-		for (j = 0; j < n; j++)
+	for (i = 0; i <= n; i++)
+	{
+		for (j = 0; j <= n; j++)
 		{
+			if (j == 0)
+			{
+				printf("%d,", i * j);
+			}
+			else if (j < n)
+			{
+				printf("%4d,", i * j);
+			}
+			else
+			{
+				printf("%4d", i * j);
+			}
 
-			_putchar(i*j + '0');
-			_putchar(',');
-			_putchar(' ');
 		}
-		_putchar('\n');
+		printf("\n");
 	}
-			
-
+	}
 }
-

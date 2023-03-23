@@ -2,21 +2,22 @@
 #include<stdio.h>
 /**
  * positive_or_negative - Entry point
- * @n: is input var
+ * @i: is input var
  *
  * Return: no return
  */
-void positive_or_negative(int n)
+void positive_or_negative(int i)
 {
-	if (n > 0)
+	i = 0;
+
+	if (i > 0)
 	{
-		n = 0;
-		printf("%i is zero\n", n);
-	} else if (n < 0)
+		printf("%i is positive\n", i);
+	} else if (i < 0)
 	{
-		printf("%i is negative\n", n);
+		printf("%i is negative\n", i);
 	} else
 	{
-		printf("%i is zero\n", n);
+		printf("%i is zero\n", i);
 	}
 }

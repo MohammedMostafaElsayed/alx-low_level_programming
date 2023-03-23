@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _isupper - check for uppercase
@@ -18,5 +19,6 @@ int _isupper(int c)
 	{
 		x = 0;
 	}
+	
 	return (x);
 }

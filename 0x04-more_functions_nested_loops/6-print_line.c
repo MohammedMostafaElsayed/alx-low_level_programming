@@ -4,8 +4,9 @@
  * print_line - draw
  * @n: input
  *
- * Return:none
+ * Return: none
  */
+
 void print_line(int n)
 {
 	int i;

@@ -2,7 +2,7 @@
 
 /**
  * print_triangle - draw
- * @n: is input
+ * @size: is input
  *
  * Return: non
  */

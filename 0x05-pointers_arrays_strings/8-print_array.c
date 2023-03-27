@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * Print_array - array print n number
- * @a: is input
- * @n: input
+ * print_array - this array that you want to print
+ * @a: first
+ * @n: second
  *
  * Return: none
  */
@@ -12,13 +12,9 @@ void print_array(int *a, int n)
 {
 	int i;
 
-	i = 0;
-
-	do
+	if (n > 0)
 	{
-		printf("%d\n", *(a + i));
-	}
-	while (i < n);
+	for (i = 0; i < n ; i++)
 	{
 		if (i != (n - 1))
 		{
@@ -26,7 +22,10 @@ void print_array(int *a, int n)
 		}
 		else
 			printf("%d\n", *(a + i));
-	i++;
+	}
+	}
+	else
+	{
+		printf("%d\n", *(a + i));
 	}
 }
-

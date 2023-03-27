@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - reset to 98
- * @*n: is the input 
+ * @n: is the input
  *
  * Return: none
  */

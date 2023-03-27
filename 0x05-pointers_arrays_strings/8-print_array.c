@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * Print_array - array
+ * Print_array - array print n number
  * @a: is input
  * @n: input
  *

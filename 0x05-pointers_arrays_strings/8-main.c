@@ -15,5 +15,6 @@ array[2] = -198;
 array[3] = 298;
 array[4] = -1024;
 print_array(array, 5);
+
 return (0);
 }

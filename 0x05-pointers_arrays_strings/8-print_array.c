@@ -12,7 +12,13 @@ void print_array(int *a, int n)
 {
 	int i;
 
-	for (i = 0; i < n; i++)
+	i = 0;
+
+	do
+	{
+		printf("%d\n", *(a + i));
+	}
+	while (i < n);
 	{
 		if (i != (n - 1))
 		{
@@ -20,6 +26,7 @@ void print_array(int *a, int n)
 		}
 		else
 			printf("%d\n", *(a + i));
+	i++;
 	}
 }
 

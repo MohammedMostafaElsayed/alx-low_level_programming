@@ -4,6 +4,7 @@
  * _strncat - concatination string
  * @dest: first input
  * @src: second input
+ * @n: 3th input
  *
  * Return: char type
  */

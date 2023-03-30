@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * tring_toupper - change to upper
+ * string_toupper - change to upper
  * @s: input string
  *
  * Return: chare string

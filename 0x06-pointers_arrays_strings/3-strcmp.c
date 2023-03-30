@@ -17,9 +17,9 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (*(s1 + i) != *(s2 + i))
 		{
-			x = *(s1 + i) - *(s2 + i);
+			x = (int)*(s1 + i) - (int)*(s2 + i);
+			break;
 		}
-		break;
 	}
 	return (x);
 }

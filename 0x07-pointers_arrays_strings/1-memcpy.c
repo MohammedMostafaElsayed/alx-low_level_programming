@@ -12,7 +12,7 @@
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
-	int l;
+	unsigned int l;
 
 	i = 0;
 	l = strlen(src);

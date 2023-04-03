@@ -22,11 +22,6 @@ unsigned int _strspn(char *s, char *accept)
 			x = i + 1;
 			break;
 		}
-		else
-		{
-			x = strlen(s);
-			break;
-		}
 		i++;
 	}
 	return (x);

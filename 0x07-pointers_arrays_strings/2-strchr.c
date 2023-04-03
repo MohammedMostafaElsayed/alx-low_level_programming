@@ -2,7 +2,7 @@
 #include "stdio.h"
 
 /**
- *_strchar - locates char in string
+ *_strchr - locates char in string
  *@s: first input
  *@c: secend input
  *

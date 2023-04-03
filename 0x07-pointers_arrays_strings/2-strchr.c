@@ -2,11 +2,11 @@
 #include "stdio.h"
 
 /**
- * _strchar - locates char in string
- * @s: first input
- * @c: secend input
+ *_strchar - locates char in string
+ *@s: first input
+ *@c: secend input
  *
- * Return: string value
+ *Return: string value
  */
 char *_strchr(char *s, char c)
 {
@@ -19,7 +19,7 @@ char *_strchr(char *s, char c)
 			return (s + i);
 		}
 	}
-	if ( *(s + i) == c)
+	if (*(s + i) == c)
 		return (s + i);
 	return ('\0');
 }

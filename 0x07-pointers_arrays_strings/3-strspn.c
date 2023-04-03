@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * _strspn - for the string
@@ -23,7 +24,7 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		else if (*(accept + i) == '\0')
 		{
-			x = i + 1;
+			x = strlen(s);
 		}
 		i++;
 	}

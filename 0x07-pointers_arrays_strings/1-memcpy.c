@@ -18,16 +18,9 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	l = strlen(src);
 	while (i < n && *(src + i))
 	{
-		if ( l > n)
-		{
-			*(dest + i) = *(src + i);
-			i++;
-		}
-		else
-		{
-			*(dest + i + l) = '\0';
-		}
+		*(dest + i) = *(src + i);
+		i++;
 	}
-	*dest = '\0';
+	*(dest + l) = '\0';
 	return (dest);
 }

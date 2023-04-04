@@ -15,7 +15,7 @@ int main(void)
 	srand(time(NULL));
 	while (i < 2400)
 	{
-		c = rand % 128;
+		c = rand() % 128;
 		i += c;
 		putchar(c);
 	}

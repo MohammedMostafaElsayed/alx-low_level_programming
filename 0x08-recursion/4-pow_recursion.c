@@ -21,4 +21,5 @@ int _pow_recursion(int x, int y)
 	{
 		return (1);
 	}
+	return (0);
 }

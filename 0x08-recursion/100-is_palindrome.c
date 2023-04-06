@@ -23,5 +23,8 @@ int is_palindrome(char *s)
 		is_palindrome(s + 1);
 	}
 	else
+	{
 		return (0);
+	}
+	return (0);
 }

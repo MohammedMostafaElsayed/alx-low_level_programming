@@ -3,11 +3,11 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * _strdup - array
- * @str: string
- *
- * Return: char
- */
+* _strdup - array
+* @str: string
+*
+* Return: char
+*/
 char *_strdup(char *str)
 {
 	char *x;
@@ -15,8 +15,6 @@ char *_strdup(char *str)
 	unsigned int size;
 
 	size = strlen(str);
-	if (*str != '\0')
-	{
 		x = malloc(size * sizeof(char));
 		if (x == NULL)
 		{
@@ -29,10 +27,5 @@ char *_strdup(char *str)
 				*(x + i) = *(str + i);
 			}
 		}
-	}
-	else
-	{
-		return NULL;
-	}
 	return (x);
 }

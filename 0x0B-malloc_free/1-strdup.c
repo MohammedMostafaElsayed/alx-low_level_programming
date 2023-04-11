@@ -15,7 +15,7 @@ char *_strdup(char *str)
 	unsigned int size;
 
 	size = strlen(str);
-	if (*str != '\0')
+	if (*str != NULL)
 	{
 		x = malloc(size * sizeof(char));
 		if (x == NULL)
@@ -32,7 +32,7 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		x = '\0';
+		x = NULL;
 	}
 	return (x);
 }

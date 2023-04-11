@@ -14,17 +14,14 @@ char *_strdup(char *str)
 	unsigned int i;
 	unsigned int size;
 
-	size = strlen(str);
 	if (str == NULL)
-	{
 		return (NULL);
-	}
-	else
-	{
-		x = malloc(size * sizeof(char) + 1);
+
+	size = strlen(str);
+		x = malloc(size * sizeof(*str) + 1);
 		if (x == NULL)
 		{
-			printf("no enough memory\n");
+			return (NULL);
 		}
 		else
 		{
@@ -34,5 +31,4 @@ char *_strdup(char *str)
 			}
 		}
 		return (x);
-	}
 }

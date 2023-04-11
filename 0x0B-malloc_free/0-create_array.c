@@ -17,9 +17,16 @@ char *create_array(unsigned int size, char c)
 	if (size != 0)
 	{
 		x = malloc(size * sizeof(char));
-		for (i = 0; i < size; i++)
+		if (x == NULL)
 		{
-			*(x + i) = c;
+			printf("faild to allocate memory");
+		}
+		else
+		{
+			for (i = 0; i < size; i++)
+			{
+				*(x + i) = c;
+			}
 		}
 	}
 	else

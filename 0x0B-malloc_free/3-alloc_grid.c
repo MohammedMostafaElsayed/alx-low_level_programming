@@ -28,7 +28,9 @@ int **alloc_grid(int width, int height)
 		x[i] = malloc(width * sizeof(int));
 		if (x[i] == NULL)
 		{
-			printf("there is no space");
+			while (i--)
+				free(x[i]);
+			free(x);
 			return (NULL);
 		}
 	}
@@ -40,10 +42,5 @@ int **alloc_grid(int width, int height)
 		}
 	}
 	return (x);
-	for (i = 0; i < height; i++)
-	{
-		free(x[i]);
-	}
-	free(x);
 }
 

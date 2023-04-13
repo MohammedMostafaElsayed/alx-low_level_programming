@@ -2,6 +2,10 @@
 #include <stdlib.h>
 
 /**
+ * malloc_checked - return void pointer
+ * @b: first pramiter
+ *
+ * Return: pinter
  */
 void *malloc_checked(unsigned int b)
 {
@@ -9,6 +13,6 @@ void *malloc_checked(unsigned int b)
 
 	x = malloc(b);
 	if (x == NULL)
-		return NULL;
+		exit(98);
 	return (x);
 }

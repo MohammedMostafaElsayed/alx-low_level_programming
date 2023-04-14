@@ -19,7 +19,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		x = malloc(size * nmemb);
 		if (x == NULL)
 		{
-			printf("faild to allocate memory");
+			return (NULL);
 		}
 		else
 		{
@@ -31,7 +31,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	else
 	{
-		x = '\0';
+		return (NULL);
 	}
 	return (x);
 }

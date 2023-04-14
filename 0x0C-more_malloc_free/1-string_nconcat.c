@@ -24,29 +24,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	w = strlen(s2);
 	if (w >= n)
 	{
-	x = malloc(((i + n) * sizeof(*s1)) + 1);
+		w = n;
 	}
-	else
-	{
-		x = malloc(((i + w) * sizeof(*s1)) + 1);
-	}
+	x = malloc(i + n + 1 );
 	if (x == NULL)
 	{
 		return (NULL);
 	}
-	else
-	{
-	for (j = 0; j < i; j++)
-	{
-		*(x + j) = *(s1 + j);
-	}
-	for (j = 0; j < w; j++)
-	{
-		if (j < n)
-		{
-		*(x + i + j) = *(s2 + j);
-		}
-	}
-	}
+	memcpy(x, s1, i);
+	memcpy(x + i, s2, n);
+	*(x + i + n) = '\0';
 	return (x);
 }

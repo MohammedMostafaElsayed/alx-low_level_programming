@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
- * free_dog - free
- * @dog_t *d: ptr
+ * free_dog - erase the fun
+ * @d: ptr
  *
  * Return: none
  */

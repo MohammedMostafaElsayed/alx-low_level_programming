@@ -1,7 +1,7 @@
 #ifndef DOG_H
 #define DOG_H
 /**
- * dog - the name 
+ * dog - the name
  * @name: 1 member
  * @age: 2 member
  * @owner: 3 member

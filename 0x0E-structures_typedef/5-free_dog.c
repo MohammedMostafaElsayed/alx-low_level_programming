@@ -3,7 +3,7 @@
 
 /**
  * free_dog - free
- * @d: ptr
+ * @dog_t *d: ptr
  *
  * Return: none
  */

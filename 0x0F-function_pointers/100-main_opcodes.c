@@ -27,13 +27,13 @@ int main(int argc, char **argv)
 	x = (char *)main;
 	for (i = 0; i < y; i++)
 	{
-		if (i == y - 1)
+		y--;
+		if( y == 0)
 		{
-			printf("%02hhx ", *(x + i));
+			printf("%02hhx\n ", *(x + 1));
 			break;
 		}
 		printf("%02hhx ", *(x + i));
 	}
-	printf("\n");
 	return (0);
 }

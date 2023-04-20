@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	{
 		if (i == y - 1)
 		{
-			printf("%02hhx\n ", *(x + i));
+			printf("%02hhx\n", *(x + i));
 			break;
 		}
 		printf("%02hhx ", *(x + i));

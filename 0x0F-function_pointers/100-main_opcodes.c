@@ -27,8 +27,7 @@ int main(int argc, char **argv)
 	x = (char *)main;
 	for (i = 0; i < y; i++)
 	{
-		y--;
-		if( y == 0)
+		if(i == y - 1)
 		{
 			printf("%02hhx\n ", *(x + 1));
 			break;

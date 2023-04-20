@@ -27,6 +27,11 @@ int main(int argc, char **argv)
 	x = (char *)main;
 	for (i = 0; i < y; i++)
 	{
+		if (i == y - 1)
+		{
+			printf("%02hhx ", *(x + i));
+			break;
+		}
 		printf("%02hhx ", *(x + i));
 	}
 	printf("\n");

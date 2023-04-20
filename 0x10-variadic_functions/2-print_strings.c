@@ -25,11 +25,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		if (separator == NULL)
 		{
-			printf("%s ", w ? w : "(nil)");
+			printf("%s", w ? w : "(nil)");
 		}
 		else
 		{
-			printf("%s%c ", w ? w : "(nil)", *separator);
+			printf("%s%s", w ? w : "(nil)", separator);
 		}
 	}
 	va_end(x);

@@ -29,5 +29,6 @@ int main(int argc, char **argv)
 	{
 		printf("%02x ", (*x + i));
 	}
+	printf("\n");
 	return (0);
 }

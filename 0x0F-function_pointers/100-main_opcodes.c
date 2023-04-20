@@ -10,12 +10,22 @@
  */
 int main(int argc, char **argv)
 {
-	int i;
+	int i, y;
 	unsigned char *x;
 
-	(void) argc;
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+	y = atoi(argv[1]);
+	if (y < 0)
+	{
+		printf("Error\n");
+                exit(2);
+	}
 	x = (unsigned char *) &main;
-	for (i = 0; i < atoi(argv[1]); i++)
+	for (i = 0; i < y; i++)
 	{
 		printf("%02x ", (*x + i));
 	}

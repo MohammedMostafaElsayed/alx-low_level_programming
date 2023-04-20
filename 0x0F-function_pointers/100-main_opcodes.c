@@ -11,7 +11,7 @@
 int main(int argc, char **argv)
 {
 	int i, y;
-	unsigned char *x;
+	char *x;
 
 	if (argc != 2)
 	{
@@ -22,12 +22,12 @@ int main(int argc, char **argv)
 	if (y < 0)
 	{
 		printf("Error\n");
-                exit(2);
+		exit(2);
 	}
-	x = (unsigned char *) &main;
+	x = (char *) &main;
 	for (i = 0; i < y; i++)
 	{
-		printf("%02x ", (*x + i));
+		printf("%02hhx ", (*x + i));
 	}
 	printf("\n");
 	return (0);

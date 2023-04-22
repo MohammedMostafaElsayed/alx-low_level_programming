@@ -11,16 +11,14 @@
 */
 int main(int argc, char **argv)
 {
-	int x, y, i;
+	int x, y;
 	char *v;
-	char *w;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	w = "+, -, *, /, %";
 	x = atoi(argv[1]);
 	y = atoi(argv[3]);
 	v = argv[2];
@@ -29,20 +27,11 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(100);
 	}
-for (i = 0; *(w + i); i++)
+if (*v != '+' && *v != '-' && *v != '/' && *v != '*' && *v != '%')
 {
-if (*v == *(w + i))
-{
-printf("%d\n", get_op_func(v)(x, y));
-		break;
+	printf("Error\n");
+	exit(99);
 }
-else
-{
-printf("Error\n");
-exit(99);
-}
-}
-
-
+	printf("%d\n", get_op_func(v)(x, y));
 	return (0);
 }

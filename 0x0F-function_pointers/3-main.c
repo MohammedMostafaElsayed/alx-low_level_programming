@@ -11,28 +11,38 @@
  */
 int main(int argc, char **argv)
 {
-	int x, y;
+	int x, y, i;
 	char *v;
+	char *w;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+	w = "+, -, *, /, %";
 	x = atoi(argv[1]);
 	y = atoi(argv[3]);
 	v = argv[2];
-	if (*v == '\0')
-	{
-		printf("Error\n");
-		exit(99);
-	}
 	if ((*v == '/' || *v == '%') && y == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", get_op_func(v)(x, y));
+	for (i = 0; *(w + i); i++)
+        {
+        if (*v == *(w + i))
+        {
+                printf("%d\n", get_op_func(v)(x, y));
+		break;
+        }
+        else
+        {
+                printf("Error\n");
+                exit(99);
+        }
+        }
+
 
 	return (0);
 }

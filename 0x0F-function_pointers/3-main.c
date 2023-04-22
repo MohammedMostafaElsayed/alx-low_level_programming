@@ -3,12 +3,12 @@
 #include <stdlib.h>
 
 /**
- * main - entry
- * @argc: 1
- * @argv: 2
- *
- * Return: int
- */
+* main - entry
+* @argc: 1
+* @argv: 2
+*
+* Return: int
+*/
 int main(int argc, char **argv)
 {
 	int x, y, i;
@@ -29,19 +29,19 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(100);
 	}
-	for (i = 0; *(w + i); i++)
-        {
-        if (*v == *(w + i))
-        {
-                printf("%d\n", get_op_func(v)(x, y));
+for (i = 0; *(w + i); i++)
+{
+if (*v == *(w + i))
+{
+printf("%d\n", get_op_func(v)(x, y));
 		break;
-        }
-        else
-        {
-                printf("Error\n");
-                exit(99);
-        }
-        }
+}
+else
+{
+printf("Error\n");
+exit(99);
+}
+}
 
 
 	return (0);

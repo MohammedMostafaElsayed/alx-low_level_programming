@@ -18,4 +18,4 @@ list_t *add_node(list_t **head, const char *str)
 	x->next = *head;
 	*head = x;
 	return (*head);
-}	
+}

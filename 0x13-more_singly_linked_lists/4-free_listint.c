@@ -1,6 +1,10 @@
 #include "lists.h"
 
 /**
+ * free_listint - free list
+ * @head: first
+ *
+ * Return: void
  */
 void free_listint(listint_t *head)
 {

@@ -1,6 +1,10 @@
 #include "main.h"
 
 /**
+ * binary_to_uint - convert binary to int
+ * @b: 1 mem
+ *
+ * Return: number
  */
 unsigned int binary_to_uint(const char *b)
 {
@@ -26,5 +30,4 @@ unsigned int binary_to_uint(const char *b)
 		}
 	}
 	return (x);
-		
 }

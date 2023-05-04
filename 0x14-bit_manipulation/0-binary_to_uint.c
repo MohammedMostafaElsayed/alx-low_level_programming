@@ -13,7 +13,7 @@ unsigned int binary_to_uint(const char *b)
 	x = *(b + len - 1) - 48;
 	for (i = 1; i < len; i++)
 	{
-		if (*(b + len - i - 1) == 1)
+		if (*(b + len - i - 1) == 49)
 		{
 			x += pow(2, i);
 		}

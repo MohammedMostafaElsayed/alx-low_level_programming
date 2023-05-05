@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		printf("0");
+		_putchar('0');
 		return;
 	}
 	for (i = (sizeof(n) * 8) - 1; i >= 0; i--)
@@ -22,7 +22,7 @@ void print_binary(unsigned long int n)
 	}
 	for (; i >= 0; i--)
 	{
-		printf("%ld", (n >> i) & 1);
+		_putchar(((n >> i) & 1) + 48);
 	}
 }
 

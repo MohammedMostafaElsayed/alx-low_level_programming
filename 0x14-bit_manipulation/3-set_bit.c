@@ -1,11 +1,19 @@
 #include "main.h"
 
 /**
+ * set_bit - set spacifc bit
+ * @n: f input
+ * @index: s input
+ *
+ * Return: 1 if success -1 if not
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int mask;
 
+	if (index > sizeof(*n) * 8)
+		return (-1);
 	mask = 1 << index;
-	return (*n | mask);
-}	
+	*n = (*n | mask);
+	return (1);
+}

@@ -17,7 +17,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd < 0)
 	{
-		printf("the error ocired");
 		return (0);
 	}
 	if (filename == NULL)
@@ -25,6 +24,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buf = malloc(sizeof(char) * letters);
 	if (buf == NULL)
 	{
+		close(fd);
 		return (0);
 	}
 	size = read(fd, buf, letters);
@@ -35,8 +35,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	w = write(1, buf, size);
-	if ( w != size)
+	if ( w < 0)
+	{
+		close(fd);
+		free(buf);
 		return (0);
+	}
 	close(fd);
 	free(buf);
 	return (size);

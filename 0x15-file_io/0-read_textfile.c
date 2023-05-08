@@ -30,5 +30,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	size = read(fd, buf, letters);
 	printf("%s", buf);
 	close(fd);
+	free(buf);
 	return (size);
 }

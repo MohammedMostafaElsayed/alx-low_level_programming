@@ -15,19 +15,19 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		printf("Usage: cp file_from file_to\n");
+		dprintf("Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	x = open(argv[1], O_RDONLY);
 	if (x < 0)
 	{
-		printf("Error: Can't read from file NAME_OF_THE_FILE\n");
+		dprintf("Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
 	}
 	y = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (y < 0)
 	{
-		printf("Error: Can't write to NAME_OF_THE_FILE\n");
+		dprintf("Error: Can't write to NAME_OF_THE_FILE\n");
 		exit(99);
 	}
 	while ((r = read(x, rr, sizeof(rr))) > 0)
@@ -35,13 +35,13 @@ int main(int argc, char **argv)
 		w = write(y, rr, r);
 		if (w != r)
 		{
-			printf("Error: Can't write to NAME_OF_THE_FILE\n");
+			dprintf("Error: Can't write to NAME_OF_THE_FILE\n");
 			exit(99);
 		}
 	}
 	if (close(x) == -1 || close(y) == -1)
 	{
-		printf("Error: Can't close fd FD_VALUE\n");
+		dprintf("Error: Can't close fd FD_VALUE\n");
 		exit(100);
 	}
 	return (0);

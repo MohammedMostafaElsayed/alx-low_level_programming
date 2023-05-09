@@ -9,7 +9,7 @@
  */
 int main(int argc, char **argv)
 {
-	int x, y, e1, e2;
+	int x, y;
 	int r, w;
 	char rr[1024];
 

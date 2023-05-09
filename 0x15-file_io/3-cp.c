@@ -14,7 +14,6 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
 		exit(97);
 	}
 	x = open(argv[1], O_RDONLY);

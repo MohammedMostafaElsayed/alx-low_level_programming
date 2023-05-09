@@ -11,6 +11,7 @@ int main(int argc, char **argv)
 {
 	int x, y;
 	int r, w;
+	int c1, c2;
 	char rr[1024];
 
 	if (argc != 3)
@@ -21,13 +22,13 @@ int main(int argc, char **argv)
 	x = open(argv[1], O_RDONLY);
 	if (x < 0)
 	{
-		printf("Error: Can't read from file NAME_OF_THE_FILE\n");
+		dprintf(x, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	y = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (y < 0)
 	{
-		printf("Error: Can't write to NAME_OF_THE_FILE\n");
+		dprintf(y, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	while ((r = read(x, rr, sizeof(rr))) > 0)
@@ -35,15 +36,21 @@ int main(int argc, char **argv)
 		w = write(y, rr, r);
 		if (w != r)
 		{
-			printf("Error: Can't write to NAME_OF_THE_FILE\n");
+			dprintf(y, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
-	close(x);
-	if (close(y) == -1)
+	c1 = close(x);
+	c2 = close(y);
+	if (c1 != 0)
 	{
-		printf("Error: Can't close fd FD_VALUE\n");
+		dprintf(x, "Error: Can't close fd %d\n",c1);
 		exit(100);
 	}
+	if (c2 != 0)
+        {
+                dprintf(y, "Error: Can't close fd %d\n",c2);
+                exit(100);
+        }
 	return (0);
 }

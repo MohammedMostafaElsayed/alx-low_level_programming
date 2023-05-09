@@ -9,7 +9,7 @@
 */
 int main(int argc, char **argv)
 {
-	int x, y, r, w, c1, c2;
+	int x, y, r;
 	char rr[1024];
 
 	if (argc != 3)

@@ -42,6 +42,15 @@ int main(int argc, char **argv)
 	}
 	c1 = close(x);
 	c2 = close(y);
-	check(c1, c2);
+	if (x != 0)
+        {
+                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",c1);
+                exit(100);
+        }
+        if (y != 0)
+        {
+                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",c2);
+                exit(100);
+        }
        	return (0);
 }

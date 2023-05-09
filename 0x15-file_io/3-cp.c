@@ -1,6 +1,28 @@
 #include "main.h"
 
 /**
+ * check - entry
+ * @c1: 1
+ * @c2: 2
+ * @x: 3
+ * @y: 4
+ *
+ * Return: void
+ */
+void check(int c1, int c2, int x, int y)
+{
+if (c1 != 0)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", x);
+exit(100);
+}
+if (c2 != 0)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", y);
+exit(100);
+}
+}
+/**
 * main - entry point
 * @argc: first argument
 * @argv: seconed argument
@@ -40,17 +62,8 @@ int main(int argc, char **argv)
 	if (r < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-                exit(98);
+		exit(98);
 	}
-if (close(x) != 0)
-{
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", x);
-exit(100);
-}
-if (close(y) != 0)
-{
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", y);
-exit(100);
-}
+	check(close(x), close(y), x, y);
 	return (0);
 }

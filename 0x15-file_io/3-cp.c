@@ -41,10 +41,10 @@ int main(int argc, char **argv)
 	}
 	e1 = close(x);
 	e2 = close(y);
-	if (e1 == -1 || e2 == -1)
+	/**if (e1 == -1 || e2 == -1)
 	{
 		printf("Error: Can't close fd FD_VALUE\n");
 		exit(100);
-	}
+	}*/
 	return (0);
 }

@@ -1,17 +1,15 @@
 #include "main.h"
 
 /**
- * main - entry point
- * @argc: first argument
- * @argv: seconed argument
- *
- * Return: int
- */
+* main - entry point
+* @argc: first argument
+* @argv: seconed argument
+*
+* Return: int
+*/
 int main(int argc, char **argv)
 {
-	int x, y;
-	int r, w;
-	int c1, c2;
+	int x, y, r, w, c1, c2;
 	char rr[1024];
 
 	if (argc != 3)
@@ -42,15 +40,15 @@ int main(int argc, char **argv)
 	}
 	c1 = close(x);
 	c2 = close(y);
-	if (x != 0)
-        {
-                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",c1);
-                exit(100);
-        }
-        if (y != 0)
-        {
-                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",c2);
-                exit(100);
-        }
-       	return (0);
+if (x != 0)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", c1);
+exit(100);
+}
+if (y != 0)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", c2);
+exit(100);
+}
+	return (0);
 }

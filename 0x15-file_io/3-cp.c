@@ -14,6 +14,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
+		printf("Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	x = open(argv[1], O_RDONLY);

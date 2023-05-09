@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 	y = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (y < 0)
 	{
-		dprintf(y, "Error: Can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	while ((r = read(x, rr, sizeof(rr))) > 0)
@@ -36,21 +36,12 @@ int main(int argc, char **argv)
 		w = write(y, rr, r);
 		if (w != r)
 		{
-			dprintf(y, "Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
 	c1 = close(x);
 	c2 = close(y);
-	if (c1 != 0)
-	{
-		dprintf(x, "Error: Can't close fd %d\n",c1);
-		exit(100);
-	}
-	if (c2 != 0)
-        {
-                dprintf(y, "Error: Can't close fd %d\n",c2);
-                exit(100);
-        }
-	return (0);
+	check(c1, c2);
+       	return (0);
 }

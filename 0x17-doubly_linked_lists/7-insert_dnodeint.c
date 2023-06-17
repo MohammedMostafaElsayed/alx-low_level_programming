@@ -21,12 +21,15 @@ new->next = NULL;
 new->prev = NULL;
 if (idx == 0)
     return (add_dnodeint(&(*h), n));
+if (idx != 0)
+{
 while (temp != NULL && x < idx - 1)
 {
     temp = temp->next;
     x++;
     if (temp == NULL)
         return NULL;
+}
 }
 temp2 = temp->next;
 if (temp2 == NULL)

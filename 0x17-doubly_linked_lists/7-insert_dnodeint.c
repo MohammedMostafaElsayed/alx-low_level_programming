@@ -30,7 +30,7 @@ while (temp != NULL)
 }
 temp2 = temp->next;
 if (temp2 == NULL)
-    return NULL;
+    return (add_dnodeint_end(&(*h), n));
 temp->next = new;
 temp2->prev = new;
 new->next = temp2;

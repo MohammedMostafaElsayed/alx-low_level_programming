@@ -13,7 +13,7 @@ unsigned int x;
 
 x = 0;
 temp = *h;
-if (temp == NULL)
+if (*h == NULL)
     return NULL;
 new = malloc(sizeof(dlistint_t));
 if (new == NULL)
